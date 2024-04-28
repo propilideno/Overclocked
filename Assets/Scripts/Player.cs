@@ -10,6 +10,14 @@ public class Player : MonoBehaviour
 	[SerializeField] private GameInput gameInput;
 
 	private void Update() {
+		handleMovement();
+	}
+
+	// private void handleInteractions(){
+	//	Physics.Raycast(transform.position, transform.forward, out RaycastHit hit, 2f);
+	//}
+
+	private handleMovement(){
 		Vector2 inputVector = gameInput.GetMovementVectorNormalized();
 		Vector3 moveDir = new Vector3(inputVector.x, 0, inputVector.y);
 		float moveDistance = moveSpeed * Time.deltaTime;
