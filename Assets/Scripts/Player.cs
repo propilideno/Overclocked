@@ -5,19 +5,62 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {	
 	private bool isWalking;
+	private Vector3 lastInteractDir;
 	[SerializeField] private float moveSpeed = 5f;
 	[SerializeField] private float rotationSpeed = 10f;
 	[SerializeField] private GameInput gameInput;
 
-	private void Update() {
-		handleMovement();
+	private void Start(){
+		gameInput.onInteractAction += GameInput_OnInteractAction;
 	}
 
-	// private void handleInteractions(){
-	//	Physics.Raycast(transform.position, transform.forward, out RaycastHit hit, 2f);
-	//}
+	private void GameInput_OnInteractAction(object sender, System.EventArgs e){
+		Vector2 inputVector = gameInput.GetMovementVectorNormalized();
 
-	private handleMovement(){
+		Vector3 moveDir = new Vector3(inputVector.x, 0, inputVector.y);
+
+		float interactDistance = 2f;
+		if(moveDir != Vector3.zero){
+			lastInteractDir = moveDir;
+		}
+
+		// out significa que essa variavel armazena o retorno da função
+		if(Physics.Raycast(transform.position, lastInteractDir, out RaycastHit raycastHit, interactDistance)){
+			// TryGetComponent já lida com valores null
+			if (raycastHit.transform.TryGetComponent(out ClearCounter clearCounter)){
+				// Há um clearCounter na frente do player
+				clearCounter.Interact();
+			}
+		}
+	}
+
+	private void Update() {
+		handleMovement();	
+		handleInteractions();
+	}
+
+	private void handleInteractions(){
+		Vector2 inputVector = gameInput.GetMovementVectorNormalized();
+
+		Vector3 moveDir = new Vector3(inputVector.x, 0, inputVector.y);
+
+		float interactDistance = 2f;
+		if(moveDir != Vector3.zero){
+			lastInteractDir = moveDir;
+		}
+
+		// out significa que essa variavel armazena o retorno da função
+		if(Physics.Raycast(transform.position, lastInteractDir, out RaycastHit raycastHit, interactDistance)){
+			// TryGetComponent já lida com valores null
+			if (raycastHit.transform.TryGetComponent(out ClearCounter clearCounter)){
+				// Há um clearCounter na frente do player
+			}
+		}
+
+
+	}
+
+	private void handleMovement(){
 		Vector2 inputVector = gameInput.GetMovementVectorNormalized();
 		Vector3 moveDir = new Vector3(inputVector.x, 0, inputVector.y);
 		float moveDistance = moveSpeed * Time.deltaTime;
