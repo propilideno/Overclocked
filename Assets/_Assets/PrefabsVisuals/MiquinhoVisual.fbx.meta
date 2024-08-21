@@ -3,7 +3,12 @@ guid: 6877729a94a398421b9143e1cfed16e0
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Camiseta of caco material
+    second: {fileID: 2100000, guid: d50bd3e482b7d2a7ba969eca7cb4bc89, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
