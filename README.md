@@ -27,3 +27,14 @@ You're a IT professional who's been tasked to repair computers. You have to fix 
 - [ ] Win/Lose conditions
 - [ ] Blender Models
 - [ ] Sound Effects, Soundtrack and Voice Acting
+
+
+# LICENSED ASSETS
+- Miquinho by allany.art [CC-BY]()
+- Gaming Computer by Alex Safayan [CC-BY] (https://creativecommons.org/licenses/by/3.0/) via Poly Pizza (https://poly.pizza/m/5cN7W4ufoII)
+- Laptop / MacBook Pro by Alex Safayan [CC-BY] (https://creativecommons.org/licenses/by/3.0/) via Poly Pizza (https://poly.pizza/m/27hcX_w47Jb)
+- CPU by iPoly3D (https://poly.pizza/m/oF0cAyddAI)CPU by iPoly3D (https://poly.pizza/m/oF0cAyddAI)
+- Laptop by jeremy [CC-BY] (https://creativecommons.org/licenses/by/3.0/) via Poly Pizza (https://poly.pizza/m/4UuDHXFJ7I0)
+- Basic Laptop by Stephen Faett [CC-BY] (https://creativecommons.org/licenses/by/3.0/) via Poly Pizza (https://poly.pizza/m/0ZL6QLRkdjR)
+- Standing Desk by dook [CC-BY] (https://creativecommons.org/licenses/by/3.0/) via Poly Pizza (https://poly.pizza/m/uxIo5ge0pw)
+- Standing Desk by Zsky [CC-BY] (https://creativecommons.org/licenses/by/3.0/) via Poly Pizza (https://poly.pizza/m/dE6BqyF4Ws)
