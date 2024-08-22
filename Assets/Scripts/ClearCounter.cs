@@ -2,14 +2,30 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ClearCounter : MonoBehaviour
-{   
-    [SerializeField] private KitchenObjectsSO kitchenObjectsSO;
-    [SerializeField] private Transform counterTopPoint;
-    public void Interact(){
-        Debug.Log("Funciona, por favor");
-        Transform kitchenObjectTransform = Instantiate(kitchenObjectsSO.prefab, counterTopPoint);
-        kitchenObjectTransform.localPosition = Vector3.zero;
-        Debug.Log(kitchenObjectTransform.GetComponent<KitchenObject>().GetKitchenObjectsSO().objectName);
+public class ClearCounter : BaseCounter {   
+
+    [SerializeField] private KitchenObjectsSO kitchenObjectsSO; // Scriptable Object que contém os objetos da cozinha
+
+
+
+    public override void Interact(Player player){
+        if (!hasKitchenObject()){
+            // Não tem objeto na bancada
+            if(player.hasKitchenObject()){
+                // Se o player está segundo um objeto
+                player.GetKitchenObject().setKitchenObjectParent(this);
+            } else {
+                // Se o player não está segurando um objeto
+            }
+        } else {
+            // Tem objeto na bancada
+            if(player.hasKitchenObject()){
+                // Se o player está segundo um objeto
+            } else {
+                GetKitchenObject().setKitchenObjectParent(player);
+            }
+        }
     }
+
+    
 }
