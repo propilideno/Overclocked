@@ -22,6 +22,6 @@ public class HUDController : MonoBehaviour {
 
     void UpdateScoreText()
     {
-        scoreText.text = "Dindin: " + player.GetDollars().ToString();  
+        scoreText.text = "Dindin: R$" + player.GetDollars().ToString();  
     }
 }
