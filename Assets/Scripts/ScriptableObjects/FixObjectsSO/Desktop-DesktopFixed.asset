@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 50b7666e012be3740b84847d34ecba47, type: 3}
-  m_Name: Notebook
+  m_Script: {fileID: 11500000, guid: b9efedfe32e0fa24e88e3652755ae9d1, type: 3}
+  m_Name: Desktop-DesktopFixed
   m_EditorClassIdentifier: 
-  prefab: {fileID: 1792594185366642509, guid: aad44b0ac250ef64eab4c44f04c91de1, type: 3}
-  sprite: {fileID: 21300000, guid: 8e561590ac19b6a4fb880416d7630f6b, type: 3}
-  objectName: Notebook
+  input: {fileID: 11400000, guid: 6dba168932d6bc24382bc3e1f3520acd, type: 2}
+  output: {fileID: 11400000, guid: 67387251b0bb98b49b06d8d9345eeec3, type: 2}
+  fixingProgressMax: 5

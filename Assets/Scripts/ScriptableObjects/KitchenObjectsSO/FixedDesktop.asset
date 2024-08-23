@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 50b7666e012be3740b84847d34ecba47, type: 3}
-  m_Name: Notebook
+  m_Name: FixedDesktop
   m_EditorClassIdentifier: 
-  prefab: {fileID: 1792594185366642509, guid: aad44b0ac250ef64eab4c44f04c91de1, type: 3}
-  sprite: {fileID: 21300000, guid: 8e561590ac19b6a4fb880416d7630f6b, type: 3}
-  objectName: Notebook
+  prefab: {fileID: 1792594185366642509, guid: a00b2cbfddbf36a428435772d0573798, type: 3}
+  sprite: {fileID: 21300000, guid: 697671f26ffc9504fb02b3535eb05359, type: 3}
+  objectName: Fixed Desktop

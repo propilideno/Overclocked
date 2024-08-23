@@ -32,4 +32,16 @@ public class KitchenObject : MonoBehaviour
     public IKitchenObjectsParent GetKitchenObjectParent(){ // Método que retorna a referência ao script ClearCounter
         return kitchenObjectParent;
     }
+
+    public void destroySelf() { // Método que destroi o objeto da cozinha
+        kitchenObjectParent.clearKitchenObject();
+        Destroy(gameObject);
+    }
+
+    public static KitchenObject SpawnKitchenObject(KitchenObjectsSO kitchenObjectsSO, IKitchenObjectsParent kitchenObjectParent){
+        Transform kitchenObjectTransform = Instantiate(kitchenObjectsSO.prefab);
+        KitchenObject kitchenObject = kitchenObjectTransform.GetComponent<KitchenObject>();
+        kitchenObject.setKitchenObjectParent(kitchenObjectParent);
+        return kitchenObject;
+    }
 }

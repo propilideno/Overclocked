@@ -11,8 +11,7 @@ public class CountainerCounter : BaseCounter {
 
     public override void Interact(Player player){
         if(!player.hasKitchenObject()){
-            Transform kitchenObjectTransform = Instantiate(kitchenObjectsSO.prefab);
-            kitchenObjectTransform.GetComponent<KitchenObject>().setKitchenObjectParent(player);
+            KitchenObject.SpawnKitchenObject(kitchenObjectsSO, player);
             OnPlayerGrabbedObject?.Invoke(this, EventArgs.Empty);
         }
             
