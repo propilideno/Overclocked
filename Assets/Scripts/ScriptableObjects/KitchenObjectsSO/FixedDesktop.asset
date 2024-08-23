@@ -15,3 +15,4 @@ MonoBehaviour:
   prefab: {fileID: 1792594185366642509, guid: a00b2cbfddbf36a428435772d0573798, type: 3}
   sprite: {fileID: 21300000, guid: 697671f26ffc9504fb02b3535eb05359, type: 3}
   objectName: Fixed Desktop
+  value: 100

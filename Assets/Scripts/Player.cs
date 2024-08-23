@@ -15,6 +15,7 @@ public class Player : MonoBehaviour, IKitchenObjectsParent {
 	private Vector3 lastInteractDir;
 	private BaseCounter selectedCounter;
 	private KitchenObject kitchenObject;
+	public int dollarsEarned = 0;
 	[SerializeField] private float moveSpeed = 5f;
 	[SerializeField] private float rotationSpeed = 10f;
 	[SerializeField] private GameInput gameInput;
@@ -142,4 +143,12 @@ public class Player : MonoBehaviour, IKitchenObjectsParent {
     public bool hasKitchenObject(){
         return kitchenObject != null;
     }
+
+	public void AddDollars(int dollars){
+		dollarsEarned += dollars;
+	}
+
+	public int GetDollars(){
+		return dollarsEarned;
+	}
 }

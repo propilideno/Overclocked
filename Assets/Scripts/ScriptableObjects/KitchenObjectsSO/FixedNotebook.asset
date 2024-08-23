@@ -15,3 +15,4 @@ MonoBehaviour:
   prefab: {fileID: 3168714485561906991, guid: 94829486ee150b147bfab6186ec59393, type: 3}
   sprite: {fileID: 21300000, guid: 8e561590ac19b6a4fb880416d7630f6b, type: 3}
   objectName: Fixed Notebook
+  value: 50

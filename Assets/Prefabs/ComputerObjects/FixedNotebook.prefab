@@ -109,6 +109,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FixedNotebook_Visuals
       objectReference: {fileID: 0}
+    - target: {fileID: 5312753404516484821, guid: 81e9fe7b3cd084242a088e945f531f38,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 874e968446c933942a2e13d2e840aa73, type: 2}
     - target: {fileID: 5961162142393329408, guid: 81e9fe7b3cd084242a088e945f531f38,
         type: 3}
       propertyPath: m_Name
