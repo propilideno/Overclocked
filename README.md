@@ -38,3 +38,5 @@ You're a IT professional who's been tasked to repair computers. You have to fix 
 - Basic Laptop by Stephen Faett [CC-BY] (https://creativecommons.org/licenses/by/3.0/) via Poly Pizza (https://poly.pizza/m/0ZL6QLRkdjR)
 - Standing Desk by dook [CC-BY] (https://creativecommons.org/licenses/by/3.0/) via Poly Pizza (https://poly.pizza/m/uxIo5ge0pw)
 - Standing Desk by Zsky [CC-BY] (https://creativecommons.org/licenses/by/3.0/) via Poly Pizza (https://poly.pizza/m/dE6BqyF4Ws)
+- Phone by Quaternius (https://poly.pizza/m/k2kgBepoMU)
+- server rack by Jeremy Eyring [CC-BY] via Poly Pizza
