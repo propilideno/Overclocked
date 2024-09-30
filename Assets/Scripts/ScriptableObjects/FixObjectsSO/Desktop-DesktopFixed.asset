@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9efedfe32e0fa24e88e3652755ae9d1, type: 3}
+  m_Name: Desktop-DesktopFixed
+  m_EditorClassIdentifier: 
+  input: {fileID: 11400000, guid: 6dba168932d6bc24382bc3e1f3520acd, type: 2}
+  output: {fileID: 11400000, guid: 67387251b0bb98b49b06d8d9345eeec3, type: 2}
+  fixingProgressMax: 5
