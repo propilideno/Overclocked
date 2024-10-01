@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class ProgressBarUI : MonoBehaviour {
     [SerializeField] private FixCounter fixCounter;
     [SerializeField] private Image barImage;
+    
     private void Start(){
         fixCounter.OnProgressChanged += FixCounter_OnProgressChanged;
         barImage.fillAmount = 0f;
@@ -22,12 +23,12 @@ public class ProgressBarUI : MonoBehaviour {
         }
     }
 
-    private void Show(){
+    public void Show(){
         gameObject.SetActive(true);
     }
 
-    private void Hide(){
+    public void Hide(){
         gameObject.SetActive(false);
     }
-    
 }
+

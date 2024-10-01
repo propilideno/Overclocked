@@ -9,7 +9,7 @@ public class FixCounter : BaseCounter {
         public float progressNormalized;
     }
     [SerializeField] private FixingObjectSO[] fixingObjectSOArray;
-
+    [SerializeField] ProgressBarUI progressBarUI;
     private int fixingProgress;
     public override void Interact(Player player){
         if (!hasKitchenObject()){
@@ -34,11 +34,54 @@ public class FixCounter : BaseCounter {
                 // Se o player está segundo um objeto
             } else {
                 GetKitchenObject().setKitchenObjectParent(player);
+                progressBarUI.Hide();
             }
         }
     }
 
+    // Função para incrementar o progresso
+    public void IncrementFixProgress()
+    {
+        if (hasKitchenObject() && canBeFixed(GetKitchenObject().GetKitchenObjectsSO()))
+        {
+            fixingProgress++;
+            FixingObjectSO fixingObjectSO = getFixingObjectSOWithInput(GetKitchenObject().GetKitchenObjectsSO());
+
+            if (fixingProgress >= fixingObjectSO.fixingProgressMax)
+            {   
+                progressBarUI.Hide();
+                KitchenObjectsSO outputKitchenObjectSO = getOutputForInput(GetKitchenObject().GetKitchenObjectsSO());
+                GetKitchenObject().destroySelf();
+                KitchenObject.SpawnKitchenObject(outputKitchenObjectSO, this);
+            }
+
+            UpdateProgress();
+        }
+    }
+
+    private void UpdateProgress()
+    {
+        FixingObjectSO fixingObjectSO = getFixingObjectSOWithInput(GetKitchenObject().GetKitchenObjectsSO());
+        if(fixingObjectSO != null){
+            float progressNormalized = (float)fixingProgress / fixingObjectSO.fixingProgressMax;
+        
+        OnProgressChanged?.Invoke(this, new OnProgressChangedEventArgs
+        {
+            progressNormalized = progressNormalized
+        });
+        }
+        
+    }
+
     public override void InteractAlternate(Player player){
+        if(hasKitchenObject()){
+            if(canBeFixed(GetKitchenObject().GetKitchenObjectsSO())){   
+                progressBarUI.Show();
+            }
+        }
+    }
+
+    /*public override void InteractAlternate(Player player){
         if (hasKitchenObject()){
             if(canBeFixed(GetKitchenObject().GetKitchenObjectsSO())){
                 fixingProgress++;
@@ -57,7 +100,7 @@ public class FixCounter : BaseCounter {
                 }
             }
         }
-    }
+    }*/
 
     private bool canBeFixed(KitchenObjectsSO inputKitchenObjectSO){
         foreach (FixingObjectSO fixingObjectSO in fixingObjectSOArray){
