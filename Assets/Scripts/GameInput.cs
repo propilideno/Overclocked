@@ -31,4 +31,8 @@ public class GameInput : MonoBehaviour
         return inputVector;
         
     }
+
+    public void disableMoviment(){
+        playerInputActions.Player.Disable();
+    }
 }

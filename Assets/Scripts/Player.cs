@@ -18,7 +18,7 @@ public class Player : MonoBehaviour, IKitchenObjectsParent {
 	public int dollarsEarned = 0;
 	[SerializeField] private float moveSpeed = 5f;
 	[SerializeField] private float rotationSpeed = 10f;
-	[SerializeField] private GameInput gameInput;
+	[SerializeField] public GameInput gameInput;
 	[SerializeField] private Transform kitchenObjectHoldPoint;
 
 	// Nunca ter +1 player

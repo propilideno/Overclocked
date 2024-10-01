@@ -3,10 +3,11 @@ using UnityEngine.UI; // Se você quiser exibir o tempo em um texto UI
 
 public class Timer : MonoBehaviour
 {
-    public float timeRemaining = 180f;  // Defina o tempo inicial (em segundos)
+    [SerializeField] public float timeRemaining = 5f;  // Defina o tempo inicial (em segundos)
     public bool timerIsRunning = false; // Verifica se o timer está rodando
     public Text timeText;               // Referência ao texto UI para exibir o tempo
-
+    public ResultUIController result;   // Referência ao script que controla a tela de resultado
+    public Player player;               // Referência ao script do jogador
     void Start()
     {
         // Inicia o timer
@@ -28,6 +29,15 @@ public class Timer : MonoBehaviour
                 Debug.Log("Time has run out!");
                 timeRemaining = 0;
                 timerIsRunning = false;
+                if(player.dollarsEarned >= 1000){
+                    player.gameInput.disableMoviment();
+
+                    result.ShowVictoryScreen(); // Chama o método para exibir a tela de vitória
+                } else {
+                    player.gameInput.disableMoviment();
+
+                    result.ShowLossScreen(); // Chama o método para exibir a tela de derrota
+                }
             }
         }
     }
